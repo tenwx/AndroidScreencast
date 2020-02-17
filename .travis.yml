@@ -1,10 +1,9 @@
----
 language: java
 
-branches:
-  only:
-  - master
-
+before_install:
+  - chmod +x mvnw
 jdk:
-  - openjdk7
-  - oraclejdk7
+  - openjdk8
+  - openjdk11
+
+script: mvn clean install
